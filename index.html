@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GST Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="blue">Invoice GST Calculator</h2>
+        <hr/>
+
+        <table id="invoiceTable">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Qty</th>
+                    <th>Price (₹)</th>
+                    <th>GST %</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="invoiceBody">
+                <tr>
+                    <td data-label="Item"><input type="text" placeholder="Item name"></td>
+                    <td data-label="Qty"><input type="number" value="1"></td>
+                    <td data-label="Price"><input type="number" value="0"></td>
+                    <td data-label="GST %"><input type="number" value="18"></td>
+                    <td data-label="Action"><button onclick="removeRow(this)"> X </button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button onclick="addRow()">➕ Add Item</button>
+        <button onclick="calculateInvoice()">Calculate Invoice</button>
+
+        <div class="result" id="result"></div>
+
+        <a href="https://digitalheroesco.com" class="dh-btn">Built for Digital Heroes</a>
+        <p class="contact">Created by <strong>Patel krish bharatbhai</strong><br>Email: <strong>krishpatel1181@gmail.com</strong></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
